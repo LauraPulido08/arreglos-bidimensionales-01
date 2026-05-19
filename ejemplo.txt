@@ -8,10 +8,36 @@
 8.  
 9.  // Ingreso de notas por teclado
 10. Para (estudiante <-- 0, estudiante < 3, 1) entonces
+            //estudiante=0
+            ------------------------
+            //estudiante=1
 11.     Para (nota <-- 0, nota < 4, 1) entonces
+            //nota=0
+            //nota=1
+            //nota=2
+            //nota=3
+            //nota=4 deja de cumplir entonces se sale del ciclo
+            ------------------------
+            //nota=0 ...
+            ------------------------
 12.         // Se usa (nota + 1) y (estudiante + 1) porque los índices inician en 0
 13.         Escribir "Ingrese la nota " + (nota + 1) + " del estudiante " + (estudiante + 1) + ":"
+            //Ingrese la nota 1 del estudiante 1:
+            //Ingrese la nota 2 del estudiante 1:
+            //Ingrese la nota 3 del estudiante 1:
+            //Ingrese la nota 4 del estudiante 1: ...
+            ----------------------------------------
+            //Ingrese la nota 1 del estudiante 2:
+            ----------------------------------------
 14.         Leer notas[estudiante][nota]   // Captura las notas en la matriz
+            //        10.0[0][0]
+            //         7.0[0][1]
+            //         9.0[0][2]
+            //        10.0[0][3]
+            -----------------------
+            //         10.0[1][0] ...
+            -----------------------
+
 15.     Fin Para
 16. Fin Para
 17.  
@@ -19,14 +45,32 @@
 19. Para (estudiante <-- 0, estudiante < 3, 1) entonces
 20.     suma <-- 0   // Reinicia el acumulador de suma por cada estudiante
 21.     Para (nota <-- 0, nota < 4, 1) entonces
+              //nota=1
+              //nota=2
+              //nota=3
+              //nota= 4 ya no cumple entonces se sale del ciclo para
+              -------------------------------------------------------
 22.         suma <-- suma + notas[estudiante][nota]  // Suma todas las notas del estudiante
+            // suma = 0 + 10.0  //[0][0]
+            // suma = 10.0
+            // suma = 10.0 + 7.0  // [0][1]
+            // suma = 17.0
+            // suma = 17.0 + 9.0  // [0][2]
+            // suma = 26.0
+            // suma = 26.0 + 10.0 // [0][3]
+            // suma = 36.0
+            ---------------------------------------------------------
+
 23.     Fin Para
 24.     promedios[estudiante] <-- suma / 4   // Guarda el promedio en el arreglo
+        // promedios[0]= 36.0/4 = 9.0
 25. Fin Para
 26.  
 27. // Mostrar los promedios almacenados en el arreglo promedios
 28. Escribir "Promedios de los estudiantes:"
 29. Para (estudiante <-- 0, estudiante < 3, 1) entonces
 30.     Escribir "El promedio del estudiante " + (estudiante + 1) + " es: " + promedios[estudiante]
+                //El promedio del estudiante 1 es : 9.0
+                // ...
 31. Fin Para
 32. Fin
