@@ -1,8 +1,8 @@
 # Inicio
 
 # Declaración de la matriz para almacenar notas (3 filas - estudiantes, 4 columnas - notas)
-notas = [[0] * 4, 
-         [0] * 4, 
+notas = [[0] * 4,
+         [0] * 4,
          [0] * 4]  # Matriz 3x4 correctamente inicializada en 0
                     # [[0,0,0,0]
                     # [0,0,0,0]
@@ -63,5 +63,4 @@ contador = 1
 for promedio in promedios:
     print(f"El promedio del estudiante {contador} es: {promedio:.2f}")  #  Se imprime con dos decimales
     contador = contador + 1
-
 # Fin
